@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martcom Tech ROMs — Professional Phone Software & Repair Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            50: '#00f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .grid-bg {
+            background-image: radial-gradient(rgba(14, 165, 233, 0.12) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-black">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-cyan-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform border border-cyan-400/30">
+                    <i data-lucide="cpu" class="w-5 h-5 text-cyan-200"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-lg font-black tracking-wider text-white">MARTCOM<span class="text-cyan-400">TECH</span>ROMS</span>
+                        <span class="px-1.5 py-0.5 rounded bg-cyan-950 border border-cyan-500/30 text-[10px] font-bold text-cyan-400 mono">PRO v4.2</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 -mt-1 tracking-tight">Verified Technician Firmware & Service Tools</p>
+                </div>
+            </a>
+
+            <!-- Search Bar (Desktop) -->
+            <div class="hidden md:flex items-center relative w-80">
+                <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 pointer-events-none"></i>
+                <input type="text" id="global-search" placeholder="Search ROM, Model, Chipset, FRP..." class="w-full pl-9 pr-4 py-1.5 text-xs rounded-lg bg-slate-900 border border-slate-800 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors">
+            </div>
+
+            <!-- Header Actions -->
+            <div class="flex items-center gap-3">
+                <a href="#remote-service" class="hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-cyan-950 hover:bg-cyan-900 border border-cyan-500/40 text-cyan-300 font-medium text-xs transition-all">
+                    <i data-lucide="wrench" class="w-3.5 h-3.5"></i> Remote Unlocking
+                </a>
+                <button onclick="toggleCartModal()" class="relative p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all">
+                    <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-cyan-500 text-slate-950 text-[10px] font-bold flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Hero Banner -->
+    <section class="relative pt-24 pb-12 grid-bg border-b border-slate-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/80 border border-cyan-800/60 text-xs font-mono text-cyan-400 mb-4">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        100% Tested Flash Files & Auth Loaders Available
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                        Tested Stock ROMs, Flash Files & <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Repair Tools</span>
+                    </h1>
+                    <p class="mt-3 text-slate-400 text-sm sm:text-base leading-relaxed">
+                        Instant digital downloads for mobile repair technicians. Clean dumps, factory firmware, FRP reset files, schematic diagrams, and MTK/Qualcomm auth bypass loaders.
+                    </p>
+                    
+                    <!-- Quick Stats -->
+            <div class="mt-6 grid grid-cols-3 gap-4 pt-4 border-t border-slate-900">
+                <div>
+                    <div class="text-lg font-bold text-cyan-400 mono">14,250+</div>
+                    <div class="text-xs text-slate-500">Verified Files</div>
+                </div>
+                <div>
+                    <div class="text-lg font-bold text-cyan-400 mono">Instant</div>
+                    <div class="text-xs text-slate-500">High-Speed Download</div>
+                </div>
+                <div>
+                    <div class="text-lg font-bold text-cyan-400 mono">24/7</div>
+                    <div class="text-xs text-slate-500">Technician Support</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Status Card -->
+        <div class="w-full md:w-80 bg-slate-900/90 border border-cyan-900/40 rounded-2xl p-5 shadow-2xl relative">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
+                <span class="text-xs font-semibold text-slate-300 flex items-center gap-2">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Server Status
+                </span>
+                <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded font-mono">ONLINE</span>
+            </div>
+            <div class="space-y-2 text-xs">
+                <div class="flex justify-between text-slate-400">
+                    <span>High Speed Server:</span>
+                    <span class="text-slate-200 font-mono">10 Gbps</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                    <span>Samsung Auth Server:</span>
+                    <span class="text-emerald-400 font-mono">ACTIVE</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                    <span>Knox/MDM Auto Server:</span>
+                    <span class="text-cyan-400 font-mono">READY</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                    <span>Xiaomi Auth Credits:</span>
+                    <span class="text-cyan-400 font-mono">AVAILABLE</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                    <span>iPhone Remote Service:</span>
+                    <span class="text-slate-200 font-mono">READY</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- MDM & Knox Highlight Banner -->
+<section class="bg-gradient-to-r from-cyan-950/60 via-indigo-950/40 to-slate-950 border-b border-cyan-900/40 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-6 bg-slate-900/80 border border-cyan-500/30 rounded-2xl p-6 shadow-xl">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center shrink-0">
+                    <i data-lucide="shield-alert" class="w-6 h-6 text-cyan-400"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/40 text-[10px] font-mono font-bold uppercase">Permanent Solution</span>
+                        <h3 class="text-base font-bold text-white">MDM Lock, Knox Guard & Enterprise Profile Removal Hub</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-3xl">
+                        Untethered & factory-reset persistent MDM unlock files for Samsung (KG Locked / Active), Xiaomi, Apple iOS, and MTK/Qualcomm devices. Disables Knox enrollment services permanently with anti-relock protection.
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 shrink-0">
+                <div class="text-right hidden sm:block">
+                    <div class="text-xs text-slate-400">Supported KG States</div>
+                    <div class="text-xs font-mono font-bold text-emerald-400">Locked / Completed / Checking</div>
+                </div>
+                <button onclick="filterBrand('mdm')" class="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs rounded-xl shadow-lg shadow-cyan-500/20 transition-all flex items-center gap-2">
+                    <i data-lucide="unlock" class="w-4 h-4"></i> Browse MDM Files
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Catalog Section -->
+<section class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Brand & Category Filter Tabs -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-slate-800">
+        <!-- Brand Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" id="brand-filters">
+            <button onclick="filterBrand('all')" class="brand-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500 text-slate-950 shadow-md">All Brands</button>
+            <button onclick="filterBrand('mdm')" class="brand-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 flex items-center gap-1.5"><i data-lucide="shield-off" class="w-3.5 h-3.5 text-cyan-400"></i> MDM & Knox</button>
+            <button onclick="filterBrand('samsung')" class="brand-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Samsung</button>
+            <button onclick="filterBrand('xiaomi')" class="brand-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Xiaomi / Poco</button>
+            <button onclick="filterBrand('mtk')" class="brand-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white border border-slate-800">MediaTek (MTK)</button>
+            <button onclick="filterBrand('qualcomm')" class="brand-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Qualcomm</button>
+            <button onclick="filterBrand('iphone')" class="brand-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white border border-slate-800">iPhone / iPad</button>
+            <button onclick="filterBrand('frp')" class="brand-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white border border-slate-800">FRP Tools</button>
+        </div>
+
+        <!-- Sort By -->
+            <div class="flex items-center gap-2">
+                <span class="text-xs text-slate-400">Sort:</span>
+                <select id="sort-select" onchange="renderProducts()" class="bg-slate-900 border border-slate-800 text-xs text-slate-300 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-cyan-500">
+                    <option value="newest">Latest Uploads</option>
+                    <option value="popular">Most Downloaded</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Software Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="software-grid">
+            <!-- Dynamic JS injection here -->
+        </div>
+    </section>
+
+    <!-- Remote Repair Service Request Section -->
+    <section id="remote-service" class="py-16 bg-slate-900/50 border-t border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-indigo-950 border border-indigo-800 text-xs font-mono text-indigo-400 mb-3">
+                        <i data-lucide="radio" class="w-3.5 h-3.5"></i> Live Remote Technician Service
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Need Remote Unlocking or Custom Flash Patch?</h2>
+                    <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+                        If a device requires an authorized service account (Xiaomi Auth, Samsung Knox Remove, iPhone iCloud Bypass, IMEI repair, or Dead Boot Recovery), submit a remote session request. We connect via USB Redirector / TeamViewer.
+                    </p>
+                    
+                    <div class="mt-6 space-y-3">
+                        <div class="flex items-center gap-3 text-xs text-slate-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Direct technician support via WhatsApp & Telegram
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-slate-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Guaranteed refund if unlocking task is unsuccessful
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-slate-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Fast session connection setup within 15 minutes
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl shadow-xl">
+                    <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4 text-cyan-400"></i> Submit Remote Service Ticket
+                    </h3>
+                    <form id="remote-form" onsubmit="submitTicket(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] font-semibold text-slate-400 uppercase mb-1">Your Name / Shop Name</label>
+                                <input type="text" required placeholder="Mobile Doctor Shop" class="w-full px-3 py-2 text-xs rounded-lg bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-cyan-500">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-semibold text-slate-400 uppercase mb-1">WhatsApp / Telegram</label>
+                                <input type="text" required placeholder="+1 234 567 8900" class="w-full px-3 py-2 text-xs rounded-lg bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-cyan-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] font-semibold text-slate-400 uppercase mb-1">Phone Model & Brand</label>
+                                <input type="text" required placeholder="e.g. Samsung SM-A536B" class="w-full px-3 py-2 text-xs rounded-lg bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-cyan-500">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-semibold text-slate-400 uppercase mb-1">Service Type</label>
+                                <select class="w-full px-3 py-2 text-xs rounded-lg bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-cyan-500">
+                                    <option>Samsung KG Locked / MDM Permanent Removal</option>
+                                    <option>FRP / Google Account Lock</option>
+                                    <option>Xiaomi Enterprise / Mi Account Auth Unlock</option>
+                                    <option>Apple iPhone MDM Profile Remote Bypass</option>
+                                    <option>Dead Boot Repair / ISP Pinout</option>
+                                    <option>Custom ROM / IMEI Repair File Patch</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] font-semibold text-slate-400 uppercase mb-1">Issue Details / Android Version</label>
+                            <textarea rows="3" placeholder="Provide build number, chipset details, or error codes..." class="w-full px-3 py-2 text-xs rounded-lg bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-cyan-500 resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-2.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-600/20 transition-all">
+                            Submit Request Ticket
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed File Modal -->
+    <div id="file-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl relative p-6">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="modal-content">
+                <!-- JS populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Slide-Over Modal -->
+    <div id="cart-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex justify-end">
+        <div class="bg-slate-900 border-l border-slate-800 w-full max-w-md h-full p-6 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+                    <h3 class="text-base font-bold text-white flex items-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-4 h-4 text-cyan-400"></i> Your Selected Files
+                    </h3>
+                    <button onclick="toggleCartModal()" class="text-slate-400 hover:text-white">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                <div id="cart-items" class="space-y-3 max-h-[60vh] overflow-y-auto">
+                    <!-- Dynamic Cart Items -->
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-4">
+                <div class="flex justify-between text-sm font-semibold text-white mb-4">
+                    <span>Total Amount:</span>
+                    <span id="cart-total" class="text-cyan-400 mono">$0.00</span>
+                </div>
+                <button onclick="checkoutCart()" class="w-full py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl shadow-lg transition-all">
+                    Proceed to Instant Download & Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden px-4 py-3 rounded-xl bg-slate-900 border border-cyan-500/50 text-white text-xs shadow-2xl flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+        <span id="toast-message">Action successful</span>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        // Database of Software & Firmware Files
+        const products = [
+            {
+                id: 'mdm-sam-s23-s24',
+                name: 'Samsung Galaxy S23 / S24 Series MDM & Knox Guard Permanent Fix File',
+                brand: 'mdm',
+                version: 'v4.5 Anti-Relock (Android 14)',
+                size: '2.1 GB',
+                chipset: 'Snapdragon 8 Gen 2/3 & Exynos 2400',
+                price: 45.00,
+                downloads: 2980,
+                tested: true,
+                type: 'EFS & Secro Patch Dump (Permanent Non-Relock)',
+                md5: '4f9e12b30c4d5e6f7a8b9c0d1e2f3a4b',
+                desc: '100% tested Knox Guard & MDM lock permanent patch for S23/S24 series (SM-S911B, SM-S918B, SM-S928B). Fixes KG Status: Locked / Checking without OTA relock.'
+            },
+            {
+                id: 'mdm-xiaomi-universal',
+                name: 'Xiaomi / Poco MDM PayJoy & Enterprise Permanent Removal File',
+                brand: 'mdm',
+                version: 'MIUI 14 & HyperOS v1.0',
+                size: '1.8 GB',
+                chipset: 'Universal MTK & Qualcomm',
+                price: 28.00,
+                downloads: 1650,
+                tested: true,
+                type: 'Persist & Cust Dump Patch',
+                md5: '7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d',
+                desc: 'Factory dump file for removing PayJoy, Knox, and corporate MDM management software on Xiaomi devices. Supports factory reset without lock returning.'
+            },
+            {
+                id: 'mdm-iphone-profile',
+                name: 'Apple iOS 15 - 18 MDM Corporate Remote Bypass Config',
+                brand: 'mdm',
+                version: 'iOS 18.x Compatible',
+                size: '45 MB',
+                chipset: 'Apple A11 - A17 Pro / M1-M2',
+                price: 20.00,
+                downloads: 4120,
+                tested: true,
+                type: '1-Click Profile Activator',
+                md5: '9b8a7c6d5e4f3a2b1c0d9e8f7a6b5c4d',
+                desc: 'One-click untethered remote management (MDM) profile bypass for all iPhones and iPads. No jailbreak required. Enables full App Store & iCloud access.'
+            },
+            {
+                id: 'mdm-mtk-spd-universal',
+                name: 'Universal MediaTek / Unisoc (SPD) MDM Permanent Disable Pack',
+                brand: 'mdm',
+                version: '2026 EROM / BROM Patch',
+                size: '950 MB',
+                chipset: 'MT6765, MT6768, SPD T606/T612',
+                price: 22.00,
+                downloads: 3100,
+                tested: true,
+                type: 'Scatter & EMMC Raw Dump',
+                md5: '2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e',
+                desc: 'Universal partition dump patch targeting Tecno, Infinix, Realme, and Samsung MTK models. Completely removes MDM, PayJoy, and FinTech locking apps.'
+            },
+            {
+                id: 'rom-sam-a536b',
+                name: 'Samsung Galaxy A53 5G (SM-A536B) Repair Firmware',
+                brand: 'samsung',
+                version: 'A536BXXU7DXD1 (Android 14)',
+                size: '5.8 GB',
+                chipset: 'Exynos 1280',
+                price: 12.00,
+                downloads: 1420,
+                tested: true,
+                type: '4-File Repair Firmware (AP, BL, CP, CSC)',
+                md5: '8f9e21a30b4c5d6e7f8a9b0c1d2e3f4a',
+                desc: 'Official 4-file stock repair ROM for fixing bootloop, soft-bricks, and logo stuck issues. Features clean AP file suitable for Odin flashing.'
+            },
+            {
+                id: 'tool-frp-all-2026',
+                name: 'Martcom Tech Alliance FRP & MDM Bypass Tool 2026 Edition',
+                brand: 'frp',
+                version: 'v4.8 Multi-Brand',
+                size: '145 MB',
+                chipset: 'All MTK / SPD / Qualcomm',
+                price: 25.00,
+                downloads: 3890,
+                tested: true,
+                type: 'Executable Utility Tool',
+                md5: '1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d',
+                desc: 'One-click FRP lock and MDM profile removal for Samsung, Xiaomi, Vivo, Tecno, Infinix, and Realme devices. Supports MTP Mode, ADB, and EDL fast bypass.'
+            },
+            {
+                id: 'rom-mi-12-eng',
+                name: 'Xiaomi 12 (cupid) Engineering / Factory ROM',
+                brand: 'xiaomi',
+                version: 'ENG_V13.0.2.0',
+                size: '3.4 GB',
+                chipset: 'Snapdragon 8 Gen 1',
+                price: 18.50,
+                downloads: 870,
+                tested: true,
+                type: 'Factory Engineering Flash File',
+                md5: '7d6e5f4c3b2a10987654321fedcba987',
+                desc: 'Raw engineering ROM with write-IMEI capabilities, diagnostic port activation, and hardware testing utilities enabled.'
+            },
+            {
+                id: 'dump-mtk-universal',
+                name: 'MTK Universal Userdata & NVRAM Backups Dump Pack',
+                brand: 'mtk',
+                version: 'v2026.1 Collection',
+                size: '12.2 GB',
+                chipset: 'Helio P35, G80, G88, G99, Dimensity',
+                price: 30.00,
+                downloads: 2150,
+                tested: true,
+                type: 'Scatter Dump & EMMC Pack',
+                md5: '9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d',
+                desc: 'Includes tested NVRAM, NVDATA, and Secro dumps to repair corrupted baseband, unknown IMEI, and no network signal issues.'
+            },
+            {
+                id: 'tool-qc-edl-loader',
+                name: 'Qualcomm Firehose Programmer Collection (3,000+ Loaders)',
+                brand: 'qualcomm',
+                version: '2026 Master Database',
+                size: '850 MB',
+                chipset: 'Snapdragon Series 4xx - 8xx',
+                price: 15.00,
+                downloads: 5120,
+                tested: true,
+                type: 'ELF / BIN Loaders Pack',
+                md5: '4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e',
+                desc: 'Complete collection of signed Firehose MBN/ELF loaders required to read/write flash data in EDL 9008 mode without authorized accounts.'
+            },
+            {
+                id: 'ip-bypass-ramdisk',
+                name: 'iOS 15 - iOS 18 Ramdisk Unlock & Signal Activator',
+                brand: 'iphone',
+                version: 'v3.2 macOS / Win',
+                size: '620 MB',
+                chipset: 'Apple A9 - A12 Bionic',
+                price: 35.00,
+                downloads: 1940,
+                tested: true,
+                type: 'Passcode / Hello Screen Tool',
+                md5: '3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f',
+                desc: 'One-click bypass tool for passcode-locked and Hello screen iPhones/iPads. Features backup and restore of network activation tickets.'
+            }
+        ];
+
+        let currentBrand = 'all';
+        let cart = [];
+
+        // Initialize UI
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderProducts();
+
+            // Search filter listener
+            document.getElementById('global-search').addEventListener('input', (e) => {
+                renderProducts(e.target.value.toLowerCase());
+            });
+        });
+
+        // Filter by Brand
+        function filterBrand(brand) {
+            currentBrand = brand;
+            document.querySelectorAll('.brand-btn').forEach(btn => {
+                btn.classList.remove('bg-cyan-500', 'text-slate-950');
+                btn.classList.add('bg-slate-900', 'text-slate-300');
+            });
+            event.target.classList.remove('bg-slate-900', 'text-slate-300');
+            event.target.classList.add('bg-cyan-500', 'text-slate-950');
+            renderProducts();
+        }
+
+        // Render Products
+        function renderProducts(searchQuery = '') {
+            const grid = document.getElementById('software-grid');
+            const sortBy = document.getElementById('sort-select').value;
+
+            let filtered = products.filter(p => {
+                const matchesBrand = (currentBrand === 'all' || p.brand === currentBrand);
+                const matchesSearch = p.name.toLowerCase().includes(searchQuery) ||
+                                      p.chipset.toLowerCase().includes(searchQuery) ||
+                                      p.version.toLowerCase().includes(searchQuery);
+                return matchesBrand && matchesSearch;
+            });
+
+            // Sorting logic
+            if (sortBy === 'price-low') filtered.sort((a,b) => a.price - b.price);
+            if (sortBy === 'price-high') filtered.sort((a,b) => b.price - a.price);
+            if (sortBy === 'popular') filtered.sort((a,b) => b.downloads - a.downloads);
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-[10px] font-mono text-cyan-400 uppercase">${item.brand}</span>
+                            <span class="text-xs text-slate-500 font-mono"><i data-lucide="download" class="w-3 h-3 inline mr-1"></i>${item.downloads} dl</span>
+                        </div>
+                        <h3 class="text-base font-bold text-white group-hover:text-cyan-400 transition-colors leading-snug mb-2">${item.name}</h3>
+                        <p class="text-xs text-slate-400 line-clamp-2 mb-4">${item.desc}</p>
+                        
+                        <div class="space-y-1.5 text-[11px] font-mono text-slate-400 mb-5 bg-slate-950/50 p-3 rounded-lg border border-slate-800/80">
+                            <div class="flex justify-between"><span>Version:</span><span class="text-slate-200">${item.version}</span></div>
+                            <div class="flex justify-between"><span>File Size:</span><span class="text-slate-200">${item.size}</span></div>
+                            <div class="flex justify-between"><span>Chipset:</span><span class="text-cyan-400">${item.chipset}</span></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-800 mb-4">
+                            <span class="text-xs text-slate-400">Price:</span>
+                            <span class="text-lg font-black text-emerald-400 mono">$${item.price.toFixed(2)}</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openModal('${item.id}')" class="py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors">
+                                View Details
+                            </button>
+                            <button onclick="addToCart('${item.id}')" class="py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-slate-950 text-xs font-bold transition-all flex items-center justify-center gap-1">
+                                <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Add File
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        // View Modal Details
+        function openModal(id) {
+            const item = products.find(p => p.id === id);
+            const content = document.getElementById('modal-content');
+
+            content.innerHTML = `
+                <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-cyan-950 border border-cyan-800 text-[10px] font-mono text-cyan-400 uppercase mb-3">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Verified File Checksum & Anti-Relock Tested
+                </div>
+                <h2 class="text-xl font-extrabold text-white mb-2">${item.name}</h2>
+                <p class="text-xs text-slate-400 mb-4">${item.desc}</p>
+
+                <div class="space-y-2 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs mb-6">
+                    <div class="flex justify-between border-b border-slate-900 pb-1.5"><span class="text-slate-500">File Category:</span><span class="text-cyan-400 font-bold uppercase">${item.brand}</span></div>
+                    <div class="flex justify-between border-b border-slate-900 pb-1.5"><span class="text-slate-500">File Type:</span><span class="text-white">${item.type}</span></div>
+                    <div class="flex justify-between border-b border-slate-900 pb-1.5"><span class="text-slate-500">Version:</span><span class="text-white">${item.version}</span></div>
+                    <div class="flex justify-between border-b border-slate-900 pb-1.5"><span class="text-slate-500">File Size:</span><span class="text-white">${item.size}</span></div>
+                    <div class="flex justify-between border-b border-slate-900 pb-1.5"><span class="text-slate-500">Target Chipset:</span><span class="text-cyan-400">${item.chipset}</span></div>
+                    <div class="flex justify-between pt-1"><span class="text-slate-500">MD5 Hash:</span><span class="text-slate-400 text-[10px] select-all">${item.md5}</span></div>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Flashing Instructions & Mode Requirements:</h4>
+                    <ul class="list-disc list-inside text-xs text-slate-400 space-y-1">
+                        <li>Hardware connection required: Test point / EROM / BROM or EDL 9008 mode depending on chipset.</li>
+                        <li>Flash file using Odin, SP Flash Tool, UnlockTool, or Pandora Box.</li>
+                        <li>Ensures persistent Knox Guard status disablement (KG Status: Completed) with automatic OTA update block.</li>
+                    </ul>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                    <div>
+                        <span class="text-xs text-slate-500 block">Instant Download Price</span>
+                        <span class="text-2xl font-black text-emerald-400 mono">$${item.price.toFixed(2)}</span>
+                    </div>
+                    <button onclick="addToCart('${item.id}'); closeModal();" class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs shadow-lg transition-all">
+                        Buy & Get Download Link
+                    </button>
+                </div>
+            `;
+
+            document.getElementById('file-modal').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            document.getElementById('file-modal').classList.add('hidden');
+        }
+
+        // Cart Management
+        function addToCart(id) {
+            const item = products.find(p => p.id === id);
+            if (!cart.some(c => c.id === id)) {
+                cart.push(item);
+                updateCartUI();
+                showToast(`Added ${item.name.substring(0, 25)}... to cart`);
+            } else {
+                showToast(`File is already in your cart`);
+            }
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(c => c.id !== id);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cart-count').textContent = cart.length;
+            const container = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+
+            if (cart.length === 0) {
+                container.innerHTML = `<p class="text-xs text-slate-500 text-center py-8">Your shopping cart is empty.</p>`;
+                totalEl.textContent = '$0.00';
+                return;
+            }
+
+            let total = 0;
+            container.innerHTML = cart.map(item => {
+                total += item.price;
+                return `
+                    <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-between">
+                        <div>
+                            <h5 class="text-xs font-bold text-white line-clamp-1">${item.name}</h5>
+                            <span class="text-[10px] text-cyan-400 mono">$${item.price.toFixed(2)} — ${item.size}</span>
+                        </div>
+                        <button onclick="removeFromCart('${item.id}')" class="text-rose-400 hover:text-rose-300 p-1">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                `;
+            }).join('');
+
+            totalEl.textContent = `$${total.toFixed(2)}`;
+            lucide.createIcons();
+        }
+
+        function toggleCartModal() {
+            document.getElementById('cart-modal').classList.toggle('hidden');
+        }
+
+        function checkoutCart() {
+            if (cart.length === 0) {
+                showToast('Add files to cart before checking out');
+                return;
+            }
+            alert(`Demo Checkout: Directing to secure payment processing for $${cart.reduce((a,b)=>a+b.price,0).toFixed(2)}. Download links will be generated immediately after payment.`);
+            cart = [];
+            updateCartUI();
+            toggleCartModal();
+        }
+
+        function submitTicket(e) {
+            e.preventDefault();
+            showToast('Service ticket submitted! A technician will message you shortly.');
+            e.target.reset();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
